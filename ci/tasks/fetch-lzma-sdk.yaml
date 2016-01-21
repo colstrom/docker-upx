@@ -1,8 +1,8 @@
 ---
 image: docker:///busybox#musl
 inputs:
-  - name: repo
+  - name: docker-upx.git
 outputs:
   - name: lzma/sdk
 run:
-  path: repo/ci/scripts/fetch-lzma-sdk
+  path: docker-upx.git/ci/scripts/fetch-lzma-sdk
