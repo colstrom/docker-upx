@@ -5,7 +5,7 @@ set -e -x
 export VERSION=${VERSION:-'1.03'}
 export OUT=${OUT:-"${PWD}/ucl/source"}
 
-wget -O http://www.oberhumer.com/opensource/ucl/download/ucl-${VERSION}.tar.gz | tar xz
+wget -O - http://www.oberhumer.com/opensource/ucl/download/ucl-${VERSION}.tar.gz | tar xz
 
 mkdir -p "${OUT}"
 mv ucl-${VERSION} "${OUT}"
