@@ -1,0 +1,8 @@
+---
+image: docker:///busybox#musl
+inputs:
+  - name: docker-upx.git
+outputs:
+  - name: ucl/source
+run:
+  path: docker-upx.git/ci/scripts/fetch-ucl-source
