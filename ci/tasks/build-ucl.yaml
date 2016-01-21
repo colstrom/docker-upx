@@ -1,0 +1,10 @@
+---
+platform: linux
+image: packages/base-build
+inputs:
+  - name: docker-upx.git
+  - name: ucl/source
+outputs:
+  - ucl/build
+run:
+  path: docker-upx.git/ci/scripts/build-ucl
