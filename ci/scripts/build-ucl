@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e -x
+
+export LDFLAGS=${LDFLAGS:-'-static'}
+export SOURCE=${SOURCE:-'${PWD}/ucl/source'}
+export OUT=${OUT:-"${PWD}/ucl/build"}
+export DESTDIR=${DESTDIR:-"${OUT}"}
+
+test -d "${SOURCE}"
+cd ${SOURCE}
+./configure
+make
+make install-strip
