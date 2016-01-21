@@ -1,6 +1,6 @@
 ---
 platform: linux
-image: packages/base-build
+image: docker:///packages/build-base
 inputs:
   - name: docker-upx.git
   - name: ucl/source
