@@ -1,0 +1,8 @@
+---
+image: docker:///busybox#musl
+inputs:
+  - name: repo
+outputs:
+  - name: lzma/sdk
+run:
+  path: repo/ci/scripts/fetch-lzma-sdk
