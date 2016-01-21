@@ -8,4 +8,4 @@ export OUT=${OUT:-"${PWD}/ucl/source"}
 wget -O - http://www.oberhumer.com/opensource/ucl/download/ucl-${VERSION}.tar.gz | tar xz
 
 mkdir -p "${OUT}"
-mv ucl-${VERSION} "${OUT}"
+mv ucl-${VERSION}/* "${OUT}"
