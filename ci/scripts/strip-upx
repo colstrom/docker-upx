@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e -x
+
+export RAW=${RAW:-"${PWD}/upx/raw"}
+export OUT=${OUT:-"${PWD}/upx/stripped"}
+
+strip "${RAW}/upx" -o "${OUT}/upx"
