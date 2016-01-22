@@ -3,7 +3,7 @@
 set -e -x
 
 export BIN=${BIN:-"${PWD}/upx/bin"}
-export IMAGE=${IMAGE:-"${PWD}/docker/images/upx"}
+export IMAGE=${IMAGE:-"${PWD}/docker-upx.git/ci/images/upx"}
 export OUT=${OUT:-"${PWD}/upx/docker"}
 
 cp ${BIN}/upx ${IMAGE}/Dockerfile ${OUT}
