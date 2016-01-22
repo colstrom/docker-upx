@@ -1,0 +1,10 @@
+---
+platform: linux
+image: docker:///packages/build-base
+inputs:
+  - name: docker-upx.git
+  - name: upx/raw
+outputs:
+  - name: upx/stripped
+run:
+  path: docker-upx.git/ci/scripts/strip-upx
