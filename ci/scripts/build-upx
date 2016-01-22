@@ -9,8 +9,6 @@ export LIBUCL_TARPATH=${LIBS:-"${PWD}/ucl/libs"}
 export SOURCE=${SOURCE:-"${PWD}/upx/source"}
 export OUT=${OUT:-"${PWD}/upx/bin"}
 
-apk-install xz-dev zlib-dev
-
 find "${LIBUCL_TARPATH}" -type f -exec tar xzf '{}' -C / \;
 sed -i '/addLoad/ s/NULL/(char*)NULL/' "${SOURCE}/src/packer.cpp"
 make -C "${SOURCE}" all
