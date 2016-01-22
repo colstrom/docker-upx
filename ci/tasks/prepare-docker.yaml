@@ -3,8 +3,6 @@ platform: linux
 image: docker:///busybox#musl
 inputs:
   - name: docker-upx.git
-  - name: docker-upx.git
-    path: docker
   - name: upx/packed
     path: upx/bin
 outputs:
