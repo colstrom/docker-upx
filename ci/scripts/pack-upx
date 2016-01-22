@@ -2,8 +2,7 @@
 
 set -e -x
 
-export RAW=${RAW:-"${PWD}/upx/raw"}
+export STRIPPED=${STRIPPED:-"${PWD}/upx/stripped"}
 export OUT=${OUT:-"${PWD}/upx/packed"}
 
-strip "${BIN}/upx"
-${BIN}/upx --ultra-brute -o "${OUT}/upx"
+${STRIPPED}/upx --ultra-brute -o "${OUT}/upx"
