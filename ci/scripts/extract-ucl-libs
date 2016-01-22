@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e -x
+
+export BUILD=${BUILD:-"${PWD}/build"}
+export OUT=${OUT:-"${PWD}/ucl/libs"}
+export REVISION=${REVISION:-0}
+
+export VERSION=$(grep "#define UCL_VERSION_STRING' ${BUILD}/usr/local/include/ucl/uclconf.h" | awk 'print $3' | tr -d \")
+
+tar czf "${OUT}/ucl-libs-${VERSION}-r${REVISION}.tgz" -C "${BUILD}" usr/local/lib
