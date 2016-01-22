@@ -1,0 +1,9 @@
+---
+platform: linux
+image: docker:///busybox#musl
+inputs:
+  - name: docker-upx.git
+outputs:
+  - name: upx/source
+run:
+  path: docker-upx.git/ci/scripts/fetch-upx-source
