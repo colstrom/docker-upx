@@ -1,0 +1,10 @@
+---
+platform: linux
+image: busybox#musl
+inputs:
+  - name: docker-upx.git
+  - name: ucl/build
+output:
+  - name: ucl/libs
+run:
+  path: docker-upx.git/ci/scripts/extract-ucl-libs
