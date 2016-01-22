@@ -1,0 +1,12 @@
+---
+platform: linux
+image: docker://packages/base-build
+inputs:
+  - name: docker-upx.git
+  - name: ucl/source
+  - name: lzma/sdk
+  - name: upx/source
+outputs:
+  - name: upx/bin
+run:
+  path: docker-upx.git/ci/scripts/build-upx
