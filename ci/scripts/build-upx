@@ -7,7 +7,7 @@ export UPX_UCLDIR=${UPX_UCLDIR:-"${PWD}/ucl/source"}
 export UPX_LZMADIR=${UPX_LZMADIR:-"${PWD}/lzma/sdk"}
 export LIBUCL_TARPATH=${LIBS:-"${PWD}/ucl/libs"}
 export SOURCE=${SOURCE:-"${PWD}/upx/source"}
-export OUT=${OUT:-"${PWD}/upx/bin"}
+export OUT=${OUT:-"${PWD}/upx/raw"}
 
 find "${LIBUCL_TARPATH}" -type f -exec tar xzf '{}' -C / \;
 sed -i '/addLoad/ s/NULL/(char*)NULL/' "${SOURCE}/src/packer.cpp"
