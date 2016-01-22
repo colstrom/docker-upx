@@ -1,0 +1,60 @@
+#+TITLE: Build Pipeline for UPX on Docker
+#+LATEX_HEADER: \hypersetup{%
+#+LATEX_HEADER:   pdfborder = {0 0 0}
+#+LATEX_HEADER: }
+#+LATEX: \pagebreak
+
+* Overview
+
+This repository contains a complete pipeline to build UPX on Docker.
+
+* Usage
+** Deploying thw Pipeline
+
+#+BEGIN_SRC shell
+  fly set-pipeline --pipeline docker-upx --config ci/pipeline.yaml
+#+END_SRC
+
+The initial state of a pipeline is *paused*. You will need to *unpause* before
+it does anything interesting.
+
+#+BEGIN_SRC shell
+  fly unpause-pipeline --pipeline docker-upx
+#+END_SRC
+
+** Adding Your Secrets
+
+For the final output step to be useful, it needs somewhere to push. Since that
+is an authenticated resource, you will need to supply some _secrets_ of your
+own. You can omit these if you don't want to actually push an image.
+
+#+BEGIN_SRC yaml
+  docker-repository: repository/image
+  docker-email: user@example.local
+  docker-username: YOUR-USERNAME
+  docker-password: YOUR-PASSWORD
+#+END_SRC
+
+** Deploying Your Secrets (with the Pipeline)
+
+... or the other way around, if you prefer to read it that way.
+
+#+BEGIN_SRC shell
+  fly set-pipeline --pipeline docker-upx --config ci/pipeline.yaml  --load-vars-from secrets.yaml
+#+END_SRC
+
+* Getting Concourse
+
+If you don't have an existing Concourse deployment, you can join the fun with ~concourse-lite~.
+
+#+BEGIN_SRC shell
+  vagrant init concourse/lite
+  vagrant up
+#+END_SRC
+
+* License
+
+[[https://tldrlegal.com/license/mit-license][MIT License]]
+
+* Contributors
+- [[https://colstrom.github.io/][Chris Olstrom]] | [[mailto:chris@olstrom.com][e-mail]] | [[https://twitter.com/ChrisOlstrom][Twitter]]
