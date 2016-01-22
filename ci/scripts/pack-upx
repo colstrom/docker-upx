@@ -5,4 +5,4 @@ set -e -x
 export STRIPPED=${STRIPPED:-"${PWD}/upx/stripped"}
 export OUT=${OUT:-"${PWD}/upx/packed"}
 
-${STRIPPED}/upx --ultra-brute -o "${OUT}/upx"
+${STRIPPED}/upx --ultra-brute -o "${OUT}/upx" "${STRIPPED}/upx"
