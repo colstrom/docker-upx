@@ -5,9 +5,11 @@ set -e -x
 export LDFLAGS=${LDFLAGS:-'-static'}
 export UPX_UCLDIR=${UPX_UCLDIR:-"${PWD}/ucl/source"}
 export UPX_LZMADIR=${UPX_LZMADIR:-"${PWD}/lzma/sdk"}
+export LIBS=${LIBS:-"${PWD}/ucl/libs"}
 export SOURCE=${SOURCE:-"${PWD}/upx/source"}
 export OUT=${OUT:-"${PWD}/upx/bin"}
 
+tar xzf "${LIBS}/*.tgz" -C /
 sed -i '/addLoad/ s/NULL/(char*)NULL/' "${SOURCE}/src/packer.cpp"
 make -C "${SOURCE}" all
 
