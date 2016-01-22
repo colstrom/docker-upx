@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e -x
+
+export LDFLAGS=${LDFLAGS:-'-static'}
+export UPX_UCLDIR=${UPX_UCLDIR:-"${PWD}/ucl/source"}
+export UPX_LZMADIR=${UPX_LZMADIR:-"${PWD}/lzma/sdk"}
+export SOURCE=${SOURCE:-"${PWD}/upx/source"}
+export OUT=${OUT:-"${PWD}/upx/bin"
+
+sed -i '/addLoad/ s/NULL/(char*)NULL/' "${SOURCE}/src/packer.cpp"
+make all
+
+mkdir -p "${OUT}"
+mv "${SOURCE}/src/upx.out" "${OUT}"
