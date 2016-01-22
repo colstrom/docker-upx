@@ -9,7 +9,7 @@ export SOURCE=${SOURCE:-"${PWD}/upx/source"}
 export OUT=${OUT:-"${PWD}/upx/bin"}
 
 sed -i '/addLoad/ s/NULL/(char*)NULL/' "${SOURCE}/src/packer.cpp"
-make all
+make -C "${SOURCE}" all
 
 mkdir -p "${OUT}"
 mv "${SOURCE}/src/upx.out" "${OUT}"
