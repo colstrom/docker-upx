@@ -4,6 +4,7 @@ image: docker:///packages/build-base
 inputs:
   - name: docker-upx.git
   - name: ucl/source
+  - name: ucl/libs
   - name: lzma/sdk
   - name: upx/source
 outputs:
