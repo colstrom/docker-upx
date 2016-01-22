@@ -2,7 +2,7 @@
 
 set -e -x
 
-export BUILD=${BUILD:-"${PWD}/build"}
+export BUILD=${BUILD:-"${PWD}/ucl/build"}
 export OUT=${OUT:-"${PWD}/ucl/libs"}
 export REVISION=${REVISION:-0}
 
