@@ -1,0 +1,13 @@
+---
+platform: linux
+image: docker:///busybox#musl
+inputs:
+  - name: docker-upx.git
+  - name: docker-upx.git
+    path: docker
+  - name: upx/packed
+    path: upx/bin
+outputs:
+  - name: upx/docker
+run:
+  path: docker-upx.git/ci/scripts/prepare-docker
