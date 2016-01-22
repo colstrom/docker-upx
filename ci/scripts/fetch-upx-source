@@ -7,5 +7,5 @@ export OUT=${OUT:-"${PWD}/upx/source"}
 
 wget -O - http://upx.sourceforge.net/download/upx-${VERSION}-src.tar.bz2 | tar xj
 
-mkdir -p $(dirname "${OUT}")
-mv upx-${VERSION}-src "${OUT}"
+mkdir -p "${OUT}"
+mv upx-${VERSION}-src/* "${OUT}"
