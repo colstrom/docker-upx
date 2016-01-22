@@ -8,6 +8,6 @@ inputs:
   - name: lzma/sdk
   - name: upx/source
 outputs:
-  - name: upx/bin
+  - name: upx/raw
 run:
   path: docker-upx.git/ci/scripts/build-upx
