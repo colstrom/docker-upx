@@ -9,7 +9,7 @@
 This repository contains a complete pipeline to build UPX on Docker.
 
 * Usage
-** Deploying thw Pipeline
+** Deploying the Pipeline
 
 #+BEGIN_SRC shell
   fly set-pipeline --pipeline docker-upx --config ci/pipeline.yaml
