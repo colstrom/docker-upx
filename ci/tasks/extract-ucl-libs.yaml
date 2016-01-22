@@ -1,6 +1,6 @@
 ---
 platform: linux
-image: busybox#musl
+image: docker:///busybox#musl
 inputs:
   - name: docker-upx.git
   - name: ucl/build
