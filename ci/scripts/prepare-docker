@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e -x
+
+export BIN=${BIN:-"${PWD}/upx/bin"}
+export IMAGE=${IMAGE:-"${PWD}/docker/images/upx"}
+export OUT=${OUT:-"${PWD}/upx/docker"}
+
+cp ${BIN}/upx ${IMAGE}/Dockerfile ${OUT}
