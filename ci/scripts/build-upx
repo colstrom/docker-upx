@@ -16,4 +16,4 @@ sed -i '/addLoad/ s/NULL/(char*)NULL/' "${SOURCE}/src/packer.cpp"
 make -C "${SOURCE}" all
 
 mkdir -p "${OUT}"
-mv "${SOURCE}/src/upx.out" "${OUT}"
+mv "${SOURCE}/src/upx.out" "${OUT}/upx"
