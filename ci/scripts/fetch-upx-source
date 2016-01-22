@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e -x
+
+export VERSION=${VERSION:-'3.91'}
+export OUT=${OUT:-"${PWD}/upx/source"}
+
+wget -O - http://upx.sourceforge.net/download/upx-${VERSION}-src.tar.bz2 | tar xj
+
+mkdir -p $(dirname "${OUT}")
+mv upx-${VERSION}-src "${OUT}"
