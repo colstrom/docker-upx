@@ -4,7 +4,7 @@ image: docker:///busybox#musl
 inputs:
   - name: docker-upx.git
   - name: ucl/build
-output:
+outputs:
   - name: ucl/libs
 run:
   path: docker-upx.git/ci/scripts/extract-ucl-libs
