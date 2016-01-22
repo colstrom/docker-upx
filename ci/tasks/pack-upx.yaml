@@ -3,7 +3,7 @@ platform: linux
 image: docker:///busybox#musl
 inputs:
   - name: docker-upx.git
-  - name: upx/raw
+  - name: upx/stripped
 outputs:
   - name: upx/packed
 run:
