@@ -6,4 +6,4 @@ inputs:
 outputs:
   - name: lzma/sdk
 run:
-  path: docker-upx.git/ci/scripts/fetch-lzma-sdk
+  path: docker-upx.git/scripts/fetch-lzma-sdk
