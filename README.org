@@ -9,6 +9,12 @@
 This repository contains a complete pipeline to build UPX on Docker.
 
 * Usage
+** Cloning the Repository
+
+#+BEGIN_SRC shell
+  git clone https://github.com/colstrom/docker-upx.git
+#+END_SRC
+
 ** Deploying the Pipeline
 
 For the simplest setup, you can deploy the read-only version of this pipeline.
