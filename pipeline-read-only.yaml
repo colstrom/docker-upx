@@ -16,21 +16,21 @@ jobs:
       - get: contains-upx:build
         trigger: true
       - task: fetch-ucl-source
-        file: docker-upx.git/ci/tasks/fetch-ucl-source.yaml
+        file: docker-upx.git/tasks/fetch-ucl-source.yaml
       - task: build-ucl
-        file: docker-upx.git/ci/tasks/build-ucl.yaml
+        file: docker-upx.git/tasks/build-ucl.yaml
       - aggregate:
         - task: extract-ucl-libs
-          file: docker-upx.git/ci/tasks/extract-ucl-libs.yaml
+          file: docker-upx.git/tasks/extract-ucl-libs.yaml
         - task: fetch-lzma-sdk
-          file: docker-upx.git/ci/tasks/fetch-lzma-sdk.yaml
+          file: docker-upx.git/tasks/fetch-lzma-sdk.yaml
         - task: fetch-upx-source
-          file: docker-upx.git/ci/tasks/fetch-upx-source.yaml
+          file: docker-upx.git/tasks/fetch-upx-source.yaml
       - task: build-upx
-        file: docker-upx.git/ci/tasks/build-upx.yaml
+        file: docker-upx.git/tasks/build-upx.yaml
       - task: strip-upx
-        file: docker-upx.git/ci/tasks/strip-upx.yaml
+        file: docker-upx.git/tasks/strip-upx.yaml
       - task: pack-upx
-        file: docker-upx.git/ci/tasks/pack-upx.yaml
+        file: docker-upx.git/tasks/pack-upx.yaml
       - task: prepare-docker
-        file: docker-upx.git/ci/tasks/prepare-docker.yaml
+        file: docker-upx.git/tasks/prepare-docker.yaml
