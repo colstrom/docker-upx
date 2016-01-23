@@ -1,0 +1,8 @@
+---
+script:
+  - fly set-pipeline --non-interactive --pipeline upx --config pipeline.yaml --load-vars-from secrets.yaml
+ignore:
+  - '.git'
+  - '*.lock'
+  - '.#*'
+verbose: true
