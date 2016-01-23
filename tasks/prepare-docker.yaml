@@ -8,4 +8,4 @@ inputs:
 outputs:
   - name: upx/docker
 run:
-  path: docker-upx.git/ci/scripts/prepare-docker
+  path: docker-upx.git/scripts/prepare-docker
