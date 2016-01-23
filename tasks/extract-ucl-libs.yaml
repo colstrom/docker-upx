@@ -7,4 +7,4 @@ inputs:
 outputs:
   - name: ucl/libs
 run:
-  path: docker-upx.git/ci/scripts/extract-ucl-libs
+  path: docker-upx.git/scripts/extract-ucl-libs
