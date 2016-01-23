@@ -61,7 +61,7 @@ own.
 ... or the other way around, if you prefer to read it that way.
 
 #+BEGIN_SRC shell
-  fly set-pipeline --pipeline docker-upx --config ci/pipeline.yaml  --load-vars-from secrets.yaml
+  fly set-pipeline --pipeline docker-upx --config ci/pipeline.yaml --load-vars-from secrets.yaml
 #+END_SRC
 
 * License
