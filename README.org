@@ -57,7 +57,6 @@ own.
 If you don't have an existing Concourse deployment, you can join the fun with ~concourse-lite~.
 
 #+BEGIN_SRC shell
-  vagrant init concourse/lite
   vagrant up
 #+END_SRC
 
