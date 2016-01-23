@@ -6,4 +6,4 @@ inputs:
 outputs:
   - name: upx/source
 run:
-  path: docker-upx.git/ci/scripts/fetch-upx-source
+  path: docker-upx.git/scripts/fetch-upx-source
