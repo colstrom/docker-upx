@@ -15,6 +15,18 @@ This repository contains a complete pipeline to build UPX on Docker.
   git clone https://github.com/colstrom/docker-upx.git
 #+END_SRC
 
+** (Optional) Deploying Concourse with Vagrant
+
+This pipeline is intended for deployment with [[https://concourse.ci/][Concourse]]. If you do do not have
+an existing Concourse deployment, you can use the included ~Vagrantfile~ to
+create one locally with ~vagrant~.
+
+You can skip this if you already have Concourse.
+
+#+BEGIN_SRC shell
+  vagrant up
+#+END_SRC
+
 ** Deploying the Pipeline
 
 For the simplest setup, you can deploy the read-only version of this pipeline.
@@ -50,14 +62,6 @@ own.
 
 #+BEGIN_SRC shell
   fly set-pipeline --pipeline docker-upx --config ci/pipeline.yaml  --load-vars-from secrets.yaml
-#+END_SRC
-
-* Getting Concourse
-
-If you don't have an existing Concourse deployment, you can join the fun with ~concourse-lite~.
-
-#+BEGIN_SRC shell
-  vagrant up
 #+END_SRC
 
 * License
