@@ -7,4 +7,4 @@ inputs:
 outputs:
   - name: upx/packed
 run:
-  path: docker-upx.git/ci/scripts/pack-upx
+  path: docker-upx.git/scripts/pack-upx
