@@ -33,7 +33,7 @@ For the simplest setup, you can deploy the read-only version of this pipeline.
 It is equivalent in all ways but one: it omits the final output step.
 
 #+BEGIN_SRC shell
-  fly set-pipeline --pipeline docker-upx --config ci/pipeline-read-only.yaml
+  fly set-pipeline --pipeline docker-upx --config pipeline-read-only.yaml
 #+END_SRC
 
 The initial state of a pipeline is *paused*. You will need to *unpause* before
@@ -61,7 +61,7 @@ own.
 ... or the other way around, if you prefer to read it that way.
 
 #+BEGIN_SRC shell
-  fly set-pipeline --pipeline docker-upx --config ci/pipeline.yaml --load-vars-from secrets.yaml
+  fly set-pipeline --pipeline docker-upx --config pipeline.yaml --load-vars-from secrets.yaml
 #+END_SRC
 
 * License
