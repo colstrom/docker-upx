@@ -6,4 +6,4 @@ inputs:
 outputs:
   - name: ucl/source
 run:
-  path: docker-upx.git/ci/scripts/fetch-ucl-source
+  path: docker-upx.git/scripts/fetch-ucl-source
