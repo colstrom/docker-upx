@@ -10,4 +10,4 @@ inputs:
 outputs:
   - name: upx/raw
 run:
-  path: docker-upx.git/ci/scripts/build-upx
+  path: docker-upx.git/scripts/build-upx
