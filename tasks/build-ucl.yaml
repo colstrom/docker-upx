@@ -7,4 +7,4 @@ inputs:
 outputs:
   - name: ucl/build
 run:
-  path: docker-upx.git/ci/scripts/build-ucl
+  path: docker-upx.git/scripts/build-ucl
