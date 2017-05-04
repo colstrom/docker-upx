@@ -1,0 +1,10 @@
+---
+platform: linux
+image: docker:///busybox#musl
+inputs:
+  - name: docker-upx.git
+  - name: ucl/build
+output:
+  - name: ucl/dev
+run:
+  path: docker-upx.git/scripts/extract-ucl-headers
